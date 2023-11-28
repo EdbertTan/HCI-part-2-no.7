@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Edbert's webpage</title>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<style>
+
+	.colheight1 { 
+		display:block;
+		height:600px;
+	}
+
+	.colheight2 { 
+		display:block;
+	}
+
+
+	* {
+	box-sizing: border-box;
+	}
+
+	.left {
+		background-color: rgb(240, 231, 225);
+		padding: 20px;
+		float: left;
+		width: 33%; /* The width is 20%, by default */
+	}
+
+	.main {
+		background-color: rgb(240, 231, 225);
+		padding: 20px;
+		float: left;
+		width: 33%; /* The width is 60%, by default */
+	}
+
+	.right {
+		background-color: rgb(240, 231, 225);
+		padding: 20px;
+		float: left;
+		width: 33%; /* The width is 20%, by default */
+	}
+
+	/* Use a media query to add a break point at 800px: */
+	@media screen and (max-width: 800px) {
+		.left, .main, .right {
+			width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+		}
+	}
+	
+	@media screen and (max-width: 600px) {
+		.left2, .main2, .right2 {
+			width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+		}
+	}
+	
+	@media screen and (max-width: 768px) {
+		.left3, .main3, .right3 {
+			width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+		}
+	}
+
+	.header {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  background-color: #f1f1f1;
+}
+
+/* The progress container (grey background) */
+.progress-container {
+  width: 100%;
+  height: 8px;
+  background: #ccc;
+}
+
+/* The progress bar (scroll indicator) */
+.progress-bar {
+  height: 8px;
+  background: #04AA6D;
+  width: 0%;
+}
+	</style>
+	
+	
+</head>
+	
+
+<body style="font-family:Verdana;rgb(240, 231, 225);background-color: rgb(240, 231, 225);">
+
+	<div class="header">
+  <h2>Scroll Indicator</h2>
+  <div class="progress-container">
+    <div class="progress-bar" id="myBar"></div>
+  </div>  
+	</div>
+
+<!-- Viewport is the browser window size. 1vw = 1% of viewport width. If the viewport is 50cm wide, 1vw is 0.5cm
+-->
+
+	<p style="position: fixed;right:0;"><center><h2><h1>Edbert Tan - Student of Bina Nusantara Computer Science</h1></h2></center></p>
+
+	<div class="left left2 left3">
+		<p class="colheight1"><img src="foto.jpg" style="max-width:100%;height:auto;display:block;" alt="Edbert" title="Edbert"/></p>
+	</div>
+
+	<div class="main main2 main3">
+		<p class="colheight1"">
+	
+			<div style="margin-top:-300px;">
+				<a style="text-decoration:none;font-size:5vw;" href="https://github.com/EdbertTan">My Github</a>
+				<br>
+				<a style= "text-decoration:none;font-size:3vw;color:black;" href="https://www.instagram.com/3dberttan/">My Instagram</a>
+			</div>
+		</p>
+	</div>
+
+	<div class="right right2 right3">
+		<p class="colheight1">
+			<img src="logobinus.png" style="max-width:100%;height:auto;display:block;" alt="Logo Binus" title="Logo Binus"/>  
+			<img src="functions.jpg" style="max-width:100%;height:66%;display:block;" alt="Logo Binus" title="Logo Binus"/>  
+		</p>
+	</div>
+
+	<center><h2 style="margin-top:10px;">MY PROJECTS</h2></center>
+
+	<div class="left left2 left3" style="border-width:3px; border-style:solid; border-color:#736d6d; padding: 1em;">
+		<p class="colheight2">
+			<h2>Python calculator (2023)</h2>
+			a calculator in Python with add, subtract, multiply, divide, power function
+		</p>
+	</div>
+
+	<div class="main main2 main3" style="border-width:3px; border-style:solid; border-color:#736d6d; padding: 1em;">
+		<p class="colheight2">
+			<h2>Quadrant calculator (2023)</h2>
+			a program that can tell the location of a coordinate whether it is on a quadrant or axis
+		</p>
+	</div>
+
+	<div class="right right2 right3" style="border-width:3px; border-style:solid; border-color:#736d6d; padding: 1em;">
+		<p class="colheight2">
+			<h2>Profile website (2023)</h2>
+			a website that information about me and my activities
+		</p>
+	</div>
+
+	<div class="left left2 left3"  style="border-width:3px; border-style:solid; border-color:#736d6d; padding: 1em;">
+		<p class="colheight2">
+			<h2>Hotel admission simulation (2023)</h2>
+			a website designed to simulate a hotel admissioning site<br><br></td></tr>
+		</p>
+	</div>
+
+	<div class="main main2 main3"  style="border-width:3px; border-style:solid; border-color:#736d6d; padding: 1em;">
+		<p class="colheight2">
+			<h2>Java calculator program (2023)</h2>
+			a Java program with additional, multiplication calculator functions<br><br></td></tr>
+		</p>
+	</div>
+
+	<div class="right right2 right3"  style="border-width:3px; border-style:solid; border-color:#736d6d; padding: 1em;">
+		<p class="colheight2">
+			<h2>Java if loop else program (2023)</h2>
+			a Java Program to print the duplicate elements of an array<br><br></td></tr>
+		</p>
+	</div>
+
+
+<script>
+// When the user scrolls the page, execute myFunction 
+window.onscroll = function() {myFunction()};
+
+function myFunction() {
+  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var scrolled = (winScroll / height) * 100;
+  document.getElementById("myBar").style.width = scrolled + "%";
+}
+</script>
+</body>
+
+</html>
